@@ -1,0 +1,146 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "retry": "Retry",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "save": "Save",
+    "edit": "Edit",
+    "delete": "Delete",
+    "share": "Share",
+    "search": "Search",
+    "back": "Back",
+    "next": "Next",
+    "done": "Done",
+    "close": "Close",
+    "all": "All",
+    "noData": "No data available"
+  },
+  "tab": {
+    "home": "Home",
+    "explore": "Explore",
+    "moment": "Moment+",
+    "chat": "Chat",
+    "mypage": "My"
+  },
+  "auth": {
+    "login": "Login",
+    "logout": "Logout",
+    "register": "Sign Up",
+    "email": "Email",
+    "password": "Password",
+    "kakaoLogin": "Continue with Kakao",
+    "googleLogin": "Continue with Google",
+    "onboarding": {
+      "title1": "Plan Your Trip",
+      "desc1": "Easily manage daily schedules\nand share with friends",
+      "title2": "Capture Moments",
+      "desc2": "Document every moment with photos\nand stories on social feed",
+      "title3": "Location-based Chat",
+      "desc3": "Connect with travelers nearby\nin real-time",
+      "title4": "Manage Expenses",
+      "desc4": "Track your travel budget\nand settle with friends easily"
+    }
+  },
+  "home": {
+    "title": "Home",
+    "upcomingTrip": "Upcoming Trips",
+    "recommended": "Recommended Places",
+    "friendFeed": "Friend Updates"
+  },
+  "explore": {
+    "title": "Explore",
+    "nearby": "Nearby Places",
+    "searchPlaceholder": "Where do you want to go?",
+    "categories": {
+      "all": "All",
+      "food": "Food",
+      "nature": "Nature",
+      "history": "History",
+      "activity": "Activity",
+      "shopping": "Shopping"
+    }
+  },
+  "trip": {
+    "list": "Trip List",
+    "upcoming": "Upcoming",
+    "ongoing": "Ongoing",
+    "completed": "Completed",
+    "create": "Create Trip",
+    "edit": "Edit Trip",
+    "schedule": "Schedule",
+    "checklist": "Checklist",
+    "budget": "Budget",
+    "members": "Members",
+    "invite": "Invite",
+    "deleteConfirm": "Are you sure you want to delete this trip?"
+  },
+  "blog": {
+    "feed": "Feed",
+    "write": "Write",
+    "detail": "Detail",
+    "comment": "Comment",
+    "like": "Like",
+    "addPhoto": "Add Photo",
+    "addLocation": "Add Location",
+    "visibility": {
+      "public": "Public",
+      "friends": "Friends",
+      "private": "Private"
+    }
+  },
+  "chat": {
+    "list": "Chat",
+    "nearby": "Nearby",
+    "trip": "Trip Chat",
+    "typeMessage": "Type a message",
+    "translate": "Translate",
+    "send": "Send"
+  },
+  "expense": {
+    "title": "Expenses",
+    "add": "Add Expense",
+    "budget": "Total Budget",
+    "spent": "Spent",
+    "remaining": "Remaining",
+    "settlement": "Settle",
+    "category": "Category"
+  },
+  "challenge": {
+    "title": "Challenges",
+    "inProgress": "In Progress",
+    "completed": "Completed",
+    "badge": "Badges"
+  },
+  "mypage": {
+    "title": "My Page",
+    "followers": "Followers",
+    "following": "Following",
+    "trips": "Trips",
+    "myPosts": "My Posts",
+    "myBadges": "My Badges",
+    "settings": "Settings"
+  },
+  "settings": {
+    "title": "Settings",
+    "account": "Account",
+    "notification": "Notifications",
+    "display": "Display",
+    "privacy": "Privacy",
+    "data": "Data & Storage",
+    "appInfo": "App Info",
+    "theme": {
+      "title": "Theme",
+      "light": "Light",
+      "dark": "Dark",
+      "system": "System"
+    },
+    "language": {
+      "title": "Language",
+      "ko": "한국어",
+      "en": "English",
+      "ja": "日本語"
+    }
+  }
+}

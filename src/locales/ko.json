@@ -1,0 +1,146 @@
+{
+  "common": {
+    "loading": "로딩 중...",
+    "error": "오류가 발생했습니다",
+    "retry": "다시 시도",
+    "cancel": "취소",
+    "confirm": "확인",
+    "save": "저장",
+    "edit": "편집",
+    "delete": "삭제",
+    "share": "공유",
+    "search": "검색",
+    "back": "뒤로",
+    "next": "다음",
+    "done": "완료",
+    "close": "닫기",
+    "all": "전체",
+    "noData": "데이터가 없습니다"
+  },
+  "tab": {
+    "home": "홈",
+    "explore": "탐색",
+    "moment": "모먼+",
+    "chat": "채팅",
+    "mypage": "마이"
+  },
+  "auth": {
+    "login": "로그인",
+    "logout": "로그아웃",
+    "register": "회원가입",
+    "email": "이메일",
+    "password": "비밀번호",
+    "kakaoLogin": "카카오로 시작하기",
+    "googleLogin": "Google로 시작하기",
+    "onboarding": {
+      "title1": "여행을 계획하세요",
+      "desc1": "날짜별 일정을 쉽게 관리하고\n친구들과 함께 공유하세요",
+      "title2": "순간을 기록하세요",
+      "desc2": "여행의 모든 순간을 사진과 글로\n소셜 피드에 담아보세요",
+      "title3": "위치 기반 채팅",
+      "desc3": "현재 위치의 여행자들과\n실시간으로 소통하세요",
+      "title4": "경비를 관리하세요",
+      "desc4": "여행 예산을 한눈에 파악하고\n친구와 정산도 손쉽게"
+    }
+  },
+  "home": {
+    "title": "홈",
+    "upcomingTrip": "다가오는 여행",
+    "recommended": "추천 여행지",
+    "friendFeed": "친구 소식"
+  },
+  "explore": {
+    "title": "탐색",
+    "nearby": "내 주변 명소",
+    "searchPlaceholder": "어디로 떠나고 싶으세요?",
+    "categories": {
+      "all": "전체",
+      "food": "음식",
+      "nature": "자연",
+      "history": "역사",
+      "activity": "액티비티",
+      "shopping": "쇼핑"
+    }
+  },
+  "trip": {
+    "list": "여행 목록",
+    "upcoming": "예정",
+    "ongoing": "진행 중",
+    "completed": "완료",
+    "create": "여행 만들기",
+    "edit": "여행 편집",
+    "schedule": "일정",
+    "checklist": "체크리스트",
+    "budget": "예산",
+    "members": "멤버",
+    "invite": "초대하기",
+    "deleteConfirm": "정말 이 여행을 삭제하시겠어요?"
+  },
+  "blog": {
+    "feed": "피드",
+    "write": "기록 쓰기",
+    "detail": "기록 상세",
+    "comment": "댓글",
+    "like": "좋아요",
+    "addPhoto": "사진 추가",
+    "addLocation": "위치 추가",
+    "visibility": {
+      "public": "전체 공개",
+      "friends": "친구 공개",
+      "private": "비공개"
+    }
+  },
+  "chat": {
+    "list": "채팅",
+    "nearby": "내 주변",
+    "trip": "여행방",
+    "typeMessage": "메시지를 입력하세요",
+    "translate": "번역하기",
+    "send": "전송"
+  },
+  "expense": {
+    "title": "경비 관리",
+    "add": "지출 추가",
+    "budget": "총 예산",
+    "spent": "지출액",
+    "remaining": "잔여액",
+    "settlement": "정산하기",
+    "category": "카테고리"
+  },
+  "challenge": {
+    "title": "챌린지",
+    "inProgress": "진행 중",
+    "completed": "완료",
+    "badge": "배지"
+  },
+  "mypage": {
+    "title": "마이페이지",
+    "followers": "팔로워",
+    "following": "팔로잉",
+    "trips": "여행",
+    "myPosts": "내 기록",
+    "myBadges": "내 배지",
+    "settings": "설정"
+  },
+  "settings": {
+    "title": "설정",
+    "account": "계정 설정",
+    "notification": "알림 설정",
+    "display": "화면 설정",
+    "privacy": "개인정보 설정",
+    "data": "데이터 & 저장소",
+    "appInfo": "앱 정보",
+    "theme": {
+      "title": "테마",
+      "light": "라이트",
+      "dark": "다크",
+      "system": "시스템"
+    },
+    "language": {
+      "title": "언어",
+      "ko": "한국어",
+      "en": "English",
+      "ja": "日本語"
+    }
+  }
+}

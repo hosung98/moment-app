@@ -1,0 +1,92 @@
+/*
+ 파일명 : settingsStore.ts
+ 작성일 : 2026-05-04
+ 작성자 : 김호성
+ 수정내역 : 초기등록
+*/
+import { create } from 'zustand';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import type { ThemeMode, FontSize, Language } from '../types/common.types';
+
+interface SettingsState {
+  themeMode: ThemeMode;
+  fontSize: FontSize;
+  language: Language;
+  notifications: {
+    enabled: boolean;
+    trip: boolean;
+    chat: boolean;
+    location: boolean;
+    event: boolean;
+  };
+  privacy: {
+    profileVisibility: 'public' | 'friends' | 'private';
+    locationSharing: boolean;
+    defaultPostVisibility: 'public' | 'friends' | 'private';
+  };
+  offlineMode: boolean;
+  autoSavePhotos: boolean;
+  setThemeMode: (mode: ThemeMode) => void;
+  setFontSize: (size: FontSize) => void;
+  setLanguage: (lang: Language) => void;
+  toggleNotification: (key: keyof SettingsState['notifications']) => void;
+  updatePrivacy: (updates: Partial<SettingsState['privacy']>) => void;
+  toggleOfflineMode: () => void;
+  toggleAutoSavePhotos: () => void;
+  loadSettings: () => Promise<void>;
+}
+
+export const useSettingsStore = create<SettingsState>((set, get) => ({
+  themeMode: 'system',
+  fontSize: 'medium',
+  language: 'ko',
+  notifications: {
+    enabled: true,
+    trip: true,
+    chat: true,
+    location: false,
+    event: true,
+  },
+  privacy: {
+    profileVisibility: 'public',
+    locationSharing: false,
+    defaultPostVisibility: 'friends',
+  },
+  offlineMode: false,
+  autoSavePhotos: true,
+
+  setThemeMode: async (mode) => {
+    await AsyncStorage.setItem('themeMode', mode);
+    set({ themeMode: mode });
+  },
+
+  setFontSize: async (size) => {
+    await AsyncStorage.setItem('fontSize', size);
+    set({ fontSize: size });
+  },
+
+  setLanguage: async (lang) => {
+    await AsyncStorage.setItem('language', lang);
+    set({ language: lang });
+  },
+
+  toggleNotification: (key) =>
+    set((state) => ({
+      notifications: { ...state.notifications, [key]: !state.notifications[key] },
+    })),
+
+  updatePrivacy: (updates) =>
+    set((state) => ({ privacy: { ...state.privacy, ...updates } })),
+
+  toggleOfflineMode: () => set((state) => ({ offlineMode: !state.offlineMode })),
+  toggleAutoSavePhotos: () => set((state) => ({ autoSavePhotos: !state.autoSavePhotos })),
+
+  loadSettings: async () => {
+    const themeMode = await AsyncStorage.getItem('themeMode');
+    const fontSize = await AsyncStorage.getItem('fontSize');
+    const language = await AsyncStorage.getItem('language');
+    if (themeMode) set({ themeMode: themeMode as ThemeMode });
+    if (fontSize) set({ fontSize: fontSize as FontSize });
+    if (language) set({ language: language as Language });
+  },
+}));
