@@ -1,7 +1,7 @@
 {
   "cli": {
     "version": ">= 10.0.0",
-    "appVersionSource": "appjson"
+    "appVersionSource": "local"
   },
   "build": {
     "local": {
@@ -28,17 +28,6 @@
       },
       "android": {
         "buildType": "apk"
-      }
-    }
-  },
-  "submit": {
-    "prod": {
-      "ios": {
-        "appleId": "",
-        "ascAppId": ""
-      },
-      "android": {
-        "serviceAccountKeyPath": ""
       }
     }
   }

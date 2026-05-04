@@ -87,7 +87,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
 
       // EAS 업데이트용 (eas update 사용 시)
       eas: {
-        projectId: process.env.EAS_PROJECT_ID ?? '',
+        projectId: '8e79a683-8489-4501-b9f4-e0a5bb6fa6a1',
       },
     },
   };
