@@ -1,0 +1,45 @@
+{
+  "cli": {
+    "version": ">= 10.0.0",
+    "appVersionSource": "appjson"
+  },
+  "build": {
+    "local": {
+      "developmentClient": true,
+      "distribution": "internal",
+      "env": {
+        "APP_ENV": "local"
+      }
+    },
+    "dev": {
+      "developmentClient": false,
+      "distribution": "internal",
+      "env": {
+        "APP_ENV": "dev"
+      }
+    },
+    "prod": {
+      "distribution": "store",
+      "env": {
+        "APP_ENV": "prod"
+      },
+      "ios": {
+        "image": "latest"
+      },
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {
+    "prod": {
+      "ios": {
+        "appleId": "",
+        "ascAppId": ""
+      },
+      "android": {
+        "serviceAccountKeyPath": ""
+      }
+    }
+  }
+}

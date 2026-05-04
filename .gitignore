@@ -30,7 +30,10 @@ yarn-error.*
 .DS_Store
 *.pem
 
-# local env files
+# local env files (민감한 키 포함 — 절대 커밋 금지)
+.env.local
+.env.dev
+.env.prod
 .env*.local
 
 # typescript
