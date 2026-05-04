@@ -31,7 +31,7 @@ export const BlogFeedScreen: React.FC = () => {
         contentContainerStyle={{ paddingBottom: 100 }}
         showsVerticalScrollIndicator={false}
         renderItem={({ item }) => (
-          <BlogFeedItem post={item} onLike={() => {}} onComment={() => {}} onShare={() => {}} />
+          <BlogFeedItem post={item} onPress={() => {}} onLike={() => {}} onComment={() => {}} />
         )}
         ItemSeparatorComponent={() => (
           <View style={{ height: 8, backgroundColor: colors.background }} />

@@ -4,7 +4,7 @@
  작성자 : 김호성
  수정내역 : 초기등록
 */
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 import {
   View,
   TextInput,
@@ -24,7 +24,7 @@ interface InputProps {
   placeholder?: string;
   error?: string;
   secureTextEntry?: boolean;
-  leftIcon?: keyof typeof Ionicons.glyphMap;
+  leftIcon?: ReactNode;
   rightIcon?: keyof typeof Ionicons.glyphMap;
   onRightIconPress?: () => void;
   keyboardType?: 'default' | 'email-address' | 'numeric' | 'phone-pad';
@@ -66,7 +66,7 @@ export const Input: React.FC<InputProps> = ({
         ]}
       >
         {leftIcon && (
-          <Ionicons name={leftIcon} size={20} color={colors.textMuted} style={styles.leftIcon} />
+          <View style={styles.leftIcon}>{leftIcon}</View>
         )}
         <TextInput
           style={[styles.input, { color: colors.text, flex: 1 }]}

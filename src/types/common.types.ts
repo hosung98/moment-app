@@ -92,6 +92,11 @@ export interface Challenge {
   maxProgress: number;
   category: string;
   completedAt?: string;
+  // 화면 표시용 추가 필드
+  icon: string;           // 이모지 아이콘
+  currentCount: number;   // 현재 달성 수
+  targetCount: number;    // 목표 수
+  rewardPoints: number;   // 보상 포인트
 }
 
 export type ThemeMode = 'light' | 'dark' | 'system';

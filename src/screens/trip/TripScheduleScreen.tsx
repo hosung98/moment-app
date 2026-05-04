@@ -47,11 +47,11 @@ export const TripScheduleScreen: React.FC = () => {
                 <Text style={styles.dayNumber}>Day {day.dayNumber}</Text>
                 <Text style={styles.dayDate}>{day.date}</Text>
               </View>
-              {day.schedule.map((item, idx) => (
+              {day.schedules.map((item, idx) => (
                 <View key={item.id} style={[styles.scheduleItem, { backgroundColor: colors.surface }]}>
                   <View style={styles.timelineLeft}>
                     <View style={[styles.dot, { backgroundColor: colors.primary }]} />
-                    {idx < day.schedule.length - 1 && <View style={[styles.line, { backgroundColor: colors.border }]} />}
+                    {idx < day.schedules.length - 1 && <View style={[styles.line, { backgroundColor: colors.border }]} />}
                   </View>
                   <View style={[styles.scheduleContent, { borderBottomColor: colors.border }]}>
                     <Text style={[styles.time, { color: colors.primary }]}>{item.time}</Text>

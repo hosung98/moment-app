@@ -5,7 +5,7 @@
  수정내역 : 초기등록
 */
 import { create } from 'zustand';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import { tokenManager } from '@/utils/tokenManager';
 import type { User } from '../types/auth.types';
 
 interface AuthState {
@@ -30,20 +30,18 @@ export const useAuthStore = create<AuthState>((set) => ({
   setUser: (user) => set({ user, isAuthenticated: true }),
 
   setTokens: async (accessToken, refreshToken) => {
-    await AsyncStorage.setItem('accessToken', accessToken);
-    await AsyncStorage.setItem('refreshToken', refreshToken);
+    await tokenManager.setTokens(accessToken, refreshToken);
     set({ accessToken, refreshToken, isAuthenticated: true });
   },
 
   logout: async () => {
-    await AsyncStorage.multiRemove(['accessToken', 'refreshToken']);
+    await tokenManager.clearTokens();
     set({ user: null, accessToken: null, refreshToken: null, isAuthenticated: false });
   },
 
   loadStoredAuth: async () => {
     try {
-      const accessToken = await AsyncStorage.getItem('accessToken');
-      const refreshToken = await AsyncStorage.getItem('refreshToken');
+      const { accessToken, refreshToken } = await tokenManager.getTokens();
       if (accessToken && refreshToken) {
         set({ accessToken, refreshToken, isAuthenticated: true });
       }

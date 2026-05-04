@@ -266,6 +266,10 @@ export const MOCK_CHALLENGES: Challenge[] = [
     maxProgress: 1,
     category: '여행',
     completedAt: '2024-03-15',
+    icon: '✈️',
+    currentCount: 1,
+    targetCount: 1,
+    rewardPoints: 100,
   },
   {
     id: 'ch2',
@@ -278,6 +282,10 @@ export const MOCK_CHALLENGES: Challenge[] = [
     progress: 3,
     maxProgress: 5,
     category: '여행',
+    icon: '🌏',
+    currentCount: 3,
+    targetCount: 5,
+    rewardPoints: 500,
   },
   {
     id: 'ch3',
@@ -290,6 +298,10 @@ export const MOCK_CHALLENGES: Challenge[] = [
     progress: 67,
     maxProgress: 100,
     category: '기록',
+    icon: '📸',
+    currentCount: 67,
+    targetCount: 100,
+    rewardPoints: 300,
   },
   {
     id: 'ch4',
@@ -303,6 +315,10 @@ export const MOCK_CHALLENGES: Challenge[] = [
     maxProgress: 5,
     category: '소셜',
     completedAt: '2025-08-20',
+    icon: '👥',
+    currentCount: 5,
+    targetCount: 5,
+    rewardPoints: 400,
   },
   {
     id: 'ch5',
@@ -315,6 +331,10 @@ export const MOCK_CHALLENGES: Challenge[] = [
     progress: 28,
     maxProgress: 50,
     category: '음식',
+    icon: '🍜',
+    currentCount: 28,
+    targetCount: 50,
+    rewardPoints: 200,
   },
   {
     id: 'ch6',
@@ -328,6 +348,10 @@ export const MOCK_CHALLENGES: Challenge[] = [
     maxProgress: 1,
     category: '건강',
     completedAt: '2025-11-12',
+    icon: '👟',
+    currentCount: 1,
+    targetCount: 1,
+    rewardPoints: 150,
   },
 ];
 

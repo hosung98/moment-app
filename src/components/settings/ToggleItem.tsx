@@ -15,7 +15,7 @@ interface ToggleItemProps {
   iconColor?: string;
   label: string;
   value: boolean;
-  onToggle: () => void;
+  onToggle: (value: boolean) => void;
 }
 
 export const ToggleItem: React.FC<ToggleItemProps> = ({
@@ -36,7 +36,7 @@ export const ToggleItem: React.FC<ToggleItemProps> = ({
       rightElement={
         <Switch
           value={value}
-          onValueChange={onToggle}
+          onValueChange={(v) => onToggle(v)}
           trackColor={{ false: colors.border, true: colors.primary }}
           thumbColor="#fff"
         />

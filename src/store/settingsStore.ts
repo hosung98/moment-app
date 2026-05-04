@@ -18,11 +18,16 @@ interface SettingsState {
     chat: boolean;
     location: boolean;
     event: boolean;
+    likes: boolean;
+    follows: boolean;
+    tripUpdates: boolean;
+    marketing: boolean;
   };
   privacy: {
     profileVisibility: 'public' | 'friends' | 'private';
     locationSharing: boolean;
     defaultPostVisibility: 'public' | 'friends' | 'private';
+    activityVisible: boolean;
   };
   offlineMode: boolean;
   autoSavePhotos: boolean;
@@ -30,9 +35,13 @@ interface SettingsState {
   setFontSize: (size: FontSize) => void;
   setLanguage: (lang: Language) => void;
   toggleNotification: (key: keyof SettingsState['notifications']) => void;
+  setNotifications: (updates: Partial<SettingsState['notifications']>) => void;
   updatePrivacy: (updates: Partial<SettingsState['privacy']>) => void;
+  setPrivacy: (updates: Partial<SettingsState['privacy']>) => void;
   toggleOfflineMode: () => void;
+  setOfflineMode: (value: boolean) => void;
   toggleAutoSavePhotos: () => void;
+  setAutoSavePhotos: (value: boolean) => void;
   loadSettings: () => Promise<void>;
 }
 
@@ -46,11 +55,16 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
     chat: true,
     location: false,
     event: true,
+    likes: true,
+    follows: true,
+    tripUpdates: true,
+    marketing: false,
   },
   privacy: {
     profileVisibility: 'public',
     locationSharing: false,
     defaultPostVisibility: 'friends',
+    activityVisible: true,
   },
   offlineMode: false,
   autoSavePhotos: true,
@@ -75,11 +89,21 @@ export const useSettingsStore = create<SettingsState>((set, get) => ({
       notifications: { ...state.notifications, [key]: !state.notifications[key] },
     })),
 
+  setNotifications: (updates) =>
+    set((state) => ({
+      notifications: { ...state.notifications, ...updates },
+    })),
+
   updatePrivacy: (updates) =>
     set((state) => ({ privacy: { ...state.privacy, ...updates } })),
 
+  setPrivacy: (updates) =>
+    set((state) => ({ privacy: { ...state.privacy, ...updates } })),
+
   toggleOfflineMode: () => set((state) => ({ offlineMode: !state.offlineMode })),
+  setOfflineMode: (value) => set({ offlineMode: value }),
   toggleAutoSavePhotos: () => set((state) => ({ autoSavePhotos: !state.autoSavePhotos })),
+  setAutoSavePhotos: (value) => set({ autoSavePhotos: value }),
 
   loadSettings: async () => {
     const themeMode = await AsyncStorage.getItem('themeMode');
